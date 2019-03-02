@@ -1,0 +1,7 @@
+*.json
+*.csv
+*.geojson
+*.g.dart
+.dart_tool
+.packages
+./lib/daten-stadt-heilbronn/

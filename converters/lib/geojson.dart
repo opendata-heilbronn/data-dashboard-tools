@@ -1,7 +1,7 @@
 import 'dart:io';
 import 'dart:convert';
 import 'package:json_annotation/json_annotation.dart';
-import 'package:tree_parser/datenwaben.dart';
+import 'package:opendata_parser/datenwaben.dart';
 
 part 'geojson.g.dart';
 
@@ -45,16 +45,18 @@ void readGeoJson() async {
       Datenwabe datenwabe = Datenwabe.empty();
 
       Front front = datenwabe.front;
-      front.textTop = "Es gibt über";
-      front.value = "${mapEntry.value.length}";
-      front.textBottom = "in " + mapEntry.key;
-      front.format = "int";
-      front.background = "img/tree.svg";
-      front.color = "#ffffff";
+      front
+        ..textTop = "Es gibt über"
+        ..value = "${mapEntry.value.length}"
+        ..textBottom = "in " + mapEntry.key
+        ..format = "int"
+        ..background = "img/tree.svg"
+        ..color = "#ffffff";
 
       Back back = datenwabe.back;
-      back.text = "Das Baumkataster hat den Datenstand von 2017";
-      back.color = "#000000";
+      back
+        ..text = "Das Baumkataster hat den Datenstand von 2017"
+        ..color = "#000000";
       datenwaben.add(datenwabe);
 
       File file = File("trees ${mapEntry.key}.json"

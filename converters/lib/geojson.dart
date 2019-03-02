@@ -1,7 +1,7 @@
 import 'dart:io';
 import 'dart:convert';
 import 'package:json_annotation/json_annotation.dart';
-import 'package:tree_parser/datenwaben.dart';
+import 'package:opendata_parser/datenwaben.dart';
 
 part 'geojson.g.dart';
 
